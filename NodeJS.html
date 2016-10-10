@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Javascript Notes</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.1.2  (Win32)">
+	<META NAME="AUTHOR" CONTENT="Beelzebub TheDevil">
+	<META NAME="CREATED" CONTENT="20160711;12024661">
+	<META NAME="CHANGEDBY" CONTENT="Jean Gelinas">
+	<META NAME="CHANGED" CONTENT="20160816;16123407">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { margin-left: 0.5in; margin-right: 0.5in; margin-top: 0.79in; margin-bottom: 0.79in }
+		P { margin-bottom: 0.08in }
+		P.western { font-size: 10pt }
+		P.frame-contents-western { font-size: 10pt }
+		A:link { text-decoration: none }
+		A.western:link { font-family: "Arial Black", sans-serif; so-language: zxx; font-weight: normal }
+		A.cjk:link { so-language: zxx }
+		A.ctl:link { so-language: zxx }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<DIV ID="Frame1" DIR="LTR" STYLE="position: absolute; top: 4.72in; left: 0in; width: 6.74in; height: 1.16in; border: 1px solid #000000; padding: 0.06in; background: #336699">
+	<P CLASS="frame-contents-western" ALIGN=CENTER><FONT COLOR="#ffffff"><FONT FACE="Arial Black, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">Node
+	JS</FONT></FONT></FONT></P>
+	<P CLASS="frame-contents-western" ALIGN=CENTER><FONT COLOR="#ffffff"><FONT FACE="Arial Black, sans-serif"><FONT SIZE=3>Created:
+	<SDFIELD TYPE=DOCINFO SUBTYPE=CREATE FORMAT=DATE SDNUM="1033;1033;MMM D, YYYY">Jul 11, 2016</SDFIELD></FONT></FONT></FONT></P>
+	<P CLASS="frame-contents-western" ALIGN=CENTER><FONT COLOR="#ffffff"><FONT FACE="Arial Black, sans-serif"><FONT SIZE=3>Last
+	Modified: <SDFIELD TYPE=DOCINFO SUBTYPE=CHANGE FORMAT=DATE SDNUM="1033;1033;MMMM D, YYYY">August 16, 2016</SDFIELD>
+	<SDFIELD TYPE=DOCINFO SUBTYPE=CHANGE FORMAT=TIME SDNUM="1033;1033;HH:MM:SS AM/PM">04:12:34 PM</SDFIELD></FONT></FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-bottom: 0in"><FONT COLOR="#ffffff">Ja</FONT></P>
+<DIV ID="Table of Contents1" DIR="LTR">
+	<DIV ID="Table of Contents1_Head" DIR="LTR">
+		<P STYLE="margin-bottom: 0in; background: #336699; font-weight: normal; page-break-inside: avoid; page-break-before: always">
+		<FONT COLOR="#ffffff"><FONT FACE="Arial Black, sans-serif"><FONT SIZE=5>Table
+		of Contents</FONT></FONT></FONT></P>
+	</DIV>
+	<P STYLE="margin-top: 0.1in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__803_1871858339">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=3><B><A CLASS="western" HREF="#__RefHeading__803_1871858339">1
+	Callbacks</A>  	3</B></FONT></FONT></FONT></P>
+	<P STYLE="margin-top: 0.1in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__234_2017077888">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=3><B><A CLASS="western" HREF="#__RefHeading__234_2017077888">2
+	Events</A>  	4</B></FONT></FONT></FONT></P>
+	<P STYLE="text-indent: 0.18in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__236_2017077888">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B><A CLASS="western" HREF="#__RefHeading__236_2017077888">2.1
+	Inheriting From the EventEmitter</A>  	5</B></FONT></FONT></FONT></P>
+	<P STYLE="margin-top: 0.1in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__238_2017077888">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=3><B><A CLASS="western" HREF="#__RefHeading__238_2017077888">3
+	Modules</A>  	6</B></FONT></FONT></FONT></P>
+	<P STYLE="margin-top: 0.1in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__240_2017077888">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=3><B><A CLASS="western" HREF="#__RefHeading__240_2017077888">4
+	Streams</A>  	7</B></FONT></FONT></FONT></P>
+	<P STYLE="text-indent: 0.18in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__242_2017077888">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B><A CLASS="western" HREF="#__RefHeading__242_2017077888">4.1
+	Readable Streams</A>  	7</B></FONT></FONT></FONT></P>
+	<P STYLE="text-indent: 0.18in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__244_2017077888">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B><A CLASS="western" HREF="#__RefHeading__244_2017077888">4.2
+	Writable Streams</A>  	7</B></FONT></FONT></FONT></P>
+	<P STYLE="text-indent: 0.18in; margin-bottom: 0.06in; background: transparent; page-break-inside: avoid; page-break-before: auto">
+	<FONT COLOR="#336699"><A CLASS="western" HREF="#__RefHeading__246_2017077888">
+	</A><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><B><A CLASS="western" HREF="#__RefHeading__246_2017077888">4.3
+	Piping</A>  	8</B></FONT></FONT></FONT></P>
+</DIV>
+<P CLASS="western" STYLE="margin-bottom: 0in"><BR>
+</P>
+<P STYLE="margin-bottom: 0in; background: #6699cc; border-top: none; border-bottom: 2.50pt solid #336699; border-left: none; border-right: none; padding: 0in; font-style: normal; font-weight: normal; page-break-before: always"><A NAME="__RefHeading__803_1871858339"></A><A NAME="__RefNumPara__2709_1871858339"></A>
+<FONT COLOR="#ffffff"> 1 Callbacks</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+	</P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Node
+	handles everything as a non-blocking callback (asynchronous)</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Model
+	is Request/Reply &ndash; actively make the request and await a reply
+	to the callback function.</FONT></FONT></P>
+</UL>
+<P STYLE="margin-bottom: 0in; background: #6699cc; border-top: none; border-bottom: 2.50pt solid #336699; border-left: none; border-right: none; padding: 0in; font-style: normal; font-weight: normal; page-break-before: always"><A NAME="__RefHeading__234_2017077888"></A>
+<FONT COLOR="#ffffff"> 2 <IMG SRC="NodeJS_html_m36e8682f.png" NAME="graphics1" ALIGN=LEFT WIDTH=655 HEIGHT=655 BORDER=0><BR CLEAR=LEFT><FONT COLOR="#ffffff"><FONT FACE="Arial Black, sans-serif"><FONT SIZE=4><SPAN STYLE="font-weight: normal">Events</SPAN></FONT></FONT></FONT></FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+</UL>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">More
+	of a Publish/Subscribe methodology</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">To
+	use events, need to </FONT></FONT><FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>requires('events').EventEmitter</I></FONT></FONT></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Publisher
+	of an event &ndash; <I>emitter.emit('event', [arguments])</I></FONT></FONT></P>
+	<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<P STYLE="margin-bottom: 0.06in; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>'event'</I><SPAN STYLE="font-style: normal">
+		can be any string</SPAN></FONT></FONT></P>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">arguments
+		indicate an arry of argument values that the event will emit</FONT></FONT></P>
+	</UL>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Subscriber
+	to an event &ndash; <I>emitter.on('nameofevent',listener) &ndash;
+	listener </I>being a function that will do something when the event
+	fires</FONT></FONT></P>
+</UL>
+<IMG SRC="NodeJS_html_591322b1.png" NAME="graphics2" ALIGN=LEFT WIDTH=664 HEIGHT=635 BORDER=0><BR CLEAR=LEFT>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+</UL>
+<P ALIGN=LEFT STYLE="text-indent: 0.22in; margin-top: 0.18in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto"><A NAME="__RefHeading__236_2017077888"></A>
+<FONT COLOR="#336699"> 2.1 Inheriting From the EventEmitter</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Inheritance
+		is done in Node via the 'util' library</FONT></FONT></P>
+	</UL>
+</UL>
+<IMG SRC="NodeJS_html_m47bab288.png" NAME="graphics3" ALIGN=LEFT WIDTH=655 HEIGHT=608 BORDER=0><BR CLEAR=LEFT>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+	<P STYLE="margin-bottom: 0.06in; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+	<P STYLE="margin-bottom: 0.06in; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in; background: #6699cc; border-top: none; border-bottom: 2.50pt solid #336699; border-left: none; border-right: none; padding: 0in; font-style: normal; font-weight: normal; page-break-before: always"><A NAME="__RefHeading__238_2017077888"></A>
+<FONT COLOR="#ffffff"> 3 Modules</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+	</P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">require
+	command used to load modules into your project &ndash; works same as
+	commonjs format</FONT></FONT></P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">NPM
+	(Node Package Manager) can be used to load various modules/packages
+	into your project.</FONT></FONT></P>
+	<UL>
+		<UL>
+			<UL>
+				<UL>
+					<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">NPN
+						registry - https://www.npmjs.com</FONT></FONT></P>
+						<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Install
+						a module via command:  <I>npm install </I><SPAN STYLE="font-style: normal">module_name.
+						 </SPAN></FONT></FONT>
+						</P>
+						<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN STYLE="font-style: normal">By
+						default gets installed in the project's </SPAN><I>node_modules</I><SPAN STYLE="font-style: normal">
+						folder.</SPAN></FONT></FONT></P>
+					</UL>
+				</UL>
+			</UL>
+		</UL>
+	</UL>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">To
+	publish your own module/package to NPM registry:</FONT></FONT></P>
+	<UL>
+		<UL>
+			<UL>
+				<UL>
+					<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Need
+						to include a <I>package.json</I> file in your project root</FONT></FONT></P>
+						<UL>
+							<UL>
+								<UL>
+									<UL SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+										<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+										<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">{</FONT></FONT></P>
+										<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+										     &ldquo;<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">name&rdquo;:
+										 <I>module/package name,</I></FONT></FONT></P>
+										<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+										     &ldquo;<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">version&rdquo;:
+										<I>module/package version</I></FONT></FONT></P>
+									</UL>
+								</UL>
+							</UL>
+						</UL>
+					</UL>
+				</UL>
+			</UL>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+			 <FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>		&ldquo;</I>dependencies&rdquo;:
+			(required dependencies from the NPM registry) </FONT></FONT>
+			</P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">{</FONT></FONT></P>
+		</UL>
+	</UL>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+	              &ldquo;<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><I>module_name&rdquo;:
+	 &ldquo;version&rdquo;</I></FONT></FONT></P>
+</UL>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<UL>
+		<UL>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+			        <FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">}</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+			      &ldquo;<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">main&rdquo;:
+			 <I>entry point of your application, ie &ldquo;lib/cool.js&rdquo;</I></FONT></FONT></P>
+			<UL>
+				<UL>
+					<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<UL>
+							<UL>
+								<UL>
+									<UL SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+										<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+										<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">}</FONT></FONT></P>
+									</UL>
+								</UL>
+							</UL>
+						</UL>
+						<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Need
+						to create an account on the NPM registry, usually via command
+						<I>npm user</I></FONT></FONT></P>
+						<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+						<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">From
+						project root, run command <I>npm publish .</I> in order to
+						publish the package/module to the npm registry.</FONT></FONT></P>
+					</UL>
+				</UL>
+			</UL>
+		</UL>
+	</UL>
+</UL>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in; background: #6699cc; border-top: none; border-bottom: 2.50pt solid #336699; border-left: none; border-right: none; padding: 0in; font-style: normal; font-weight: normal; page-break-before: always"><A NAME="__RefHeading__240_2017077888"></A>
+<FONT COLOR="#ffffff"> 4 Streams</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+	</P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">IO
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN STYLE="font-style: normal">Handling</SPAN></FONT></FONT>
+	&ndash; network traffic (http/https/tcp/ip), files etc...</FONT></FONT></P>
+</UL>
+<P ALIGN=LEFT STYLE="text-indent: 0.22in; margin-top: 0.18in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto"><A NAME="__RefHeading__242_2017077888"></A>
+<FONT COLOR="#336699"> 4.1 Readable Streams</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">readable
+		&ndash; indicates if the stream is ready to be read</FONT></FONT></P>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">available
+		events &ndash; data, end, error, close</FONT></FONT></P>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">available
+		functions &ndash; pause(), resume(), destroy(), pipe()</FONT></FONT></P>
+	</UL>
+</UL>
+<P ALIGN=LEFT STYLE="text-indent: 0.22in; margin-top: 0.18in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto"><A NAME="__RefHeading__244_2017077888"></A>
+<FONT COLOR="#336699"> 4.2 Writable Streams</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">writable
+		&ndash; indicates if the stream is ready to be written to</FONT></FONT></P>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">available
+		events</FONT></FONT></P>
+		<UL SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">drain
+			&ndash; indicates that it is safe to write to the stream</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">error</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">close</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">pipe</FONT></FONT></P>
+		</UL>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">functions</FONT></FONT></P>
+		<UL SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">write()</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">end()</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">destroy()</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m20417e5c.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+			<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">destroySoon()</FONT></FONT></P>
+			<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+			</P>
+		</UL>
+	</UL>
+</UL>
+<P ALIGN=LEFT STYLE="text-indent: 0.22in; margin-top: 0.18in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: always"><A NAME="__RefHeading__246_2017077888"></A>
+<FONT COLOR="#336699"> 4.3 Piping</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<UL SRC="NodeJS_html_424a8468.gif" WIDTH=12 HEIGHT=12 ALIGN=ABSMIDDLE>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+		<IMG SRC="NodeJS_html_m256b8f02.png" NAME="graphics4" ALIGN=LEFT WIDTH=644 HEIGHT=677 BORDER=0><BR CLEAR=LEFT></P>
+	</UL>
+</UL>
+<P CLASS="western" STYLE="margin-left: -0.49in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: -0.49in; margin-bottom: 0in"><BR>
+</P>
+<P CLASS="western" STYLE="margin-left: -0.49in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: -0.49in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<IMG SRC="NodeJS_html_30fd375f.png" NAME="graphics5" ALIGN=LEFT WIDTH=631 HEIGHT=293 BORDER=0><BR CLEAR=LEFT>
+<P CLASS="western" STYLE="margin-left: -0.49in; margin-bottom: 0in; font-weight: normal; page-break-before: always">
+<BR>
+</P>
+<P CLASS="western" STYLE="margin-left: -0.49in; margin-bottom: 0in; font-weight: normal">
+<BR>
+</P>
+<P STYLE="margin-bottom: 0in; background: #6699cc; border-top: none; border-bottom: 2.50pt solid #336699; border-left: none; border-right: none; padding: 0in; font-style: normal; font-weight: normal; page-break-before: always">
+<FONT COLOR="#ffffff"> 5 APIs/Web Services</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="text-indent: 0.22in; margin-top: 0.18in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto">
+<FONT COLOR="#336699"> 5.1 </FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	</P>
+</UL>
+<P STYLE="margin-bottom: 0in; background: #6699cc; border-top: none; border-bottom: 2.50pt solid #336699; border-left: none; border-right: none; padding: 0in; font-style: normal; font-weight: normal; page-break-before: always">
+<FONT COLOR="#ffffff"> 6 MIsc</FONT></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="text-indent: 0.22in; margin-top: 0.18in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto">
+<FONT COLOR="#336699"> 6.1 Potential IDEs</FONT></FONT></FONT></P>
+<P STYLE="text-indent: 0.56in; margin-top: 0.06in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto">
+<FONT COLOR="#336699"> 6.1.1 Webstorm &ndash; not free &ndash; from
+JetBrains.</FONT></FONT></FONT></P>
+<P STYLE="text-indent: 0.56in; margin-top: 0.06in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto">
+<FONT COLOR="#336699"> 6.1.2 Visual Studio Code</FONT></FONT></FONT></P>
+<P STYLE="margin-left: 1.13in; margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">For
+some bloody reason, to get intellisense for things like express, you
+need to do the following:</FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">Project
+	needs a jsconfig.json file in the root and the following:  </FONT></FONT>
+	</P>
+	<IMG SRC="NodeJS_html_b6e0fd1.jpg" NAME="graphics6" ALIGN=LEFT WIDTH=499 HEIGHT=237 BORDER=0><BR CLEAR=LEFT>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto">
+	</P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">then
+	make sure <I>typings</I><SPAN STYLE="font-style: normal"> is
+	installed using npm &ndash; </SPAN><I>npm install typings &ndash;global
+	</I><SPAN STYLE="font-style: normal">and get the typings d.ts
+	(typescript related, definitively typed) file related to the library
+	you care about (ie express, node etc...)</SPAN></FONT></FONT></P>
+	<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt"><A CLASS="western" HREF="https://code.visualstudio.com/docs/languages/javascript">https://code.visualstudio.com/docs/languages/javascript</A>
+	&ndash; reference to what the jsconfig.json file is.</FONT></FONT></P>
+</UL>
+<P ALIGN=LEFT STYLE="text-indent: 0.22in; margin-top: 0.18in; margin-bottom: 0.06in; background: transparent; font-weight: normal; page-break-before: auto">
+<FONT COLOR="#336699"> 6.2 Gulp</FONT></FONT></FONT></P>
+<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+	<UL SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">npm
+		install gulp -g</FONT></FONT></P>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">needs
+		config file in root of project &ndash; <I>gulpfile.js</I></FONT></FONT></P>
+		<P STYLE="margin-bottom: 0.06in; font-style: normal; page-break-inside: avoid; page-break-before: auto"><IMG SRC="NodeJS_html_m2257b0b7.gif" WIDTH=10 HEIGHT=10 ALIGN=ABSMIDDLE>
+		<FONT FACE="Arial, sans-serif"><FONT SIZE=2 STYLE="font-size: 11pt">nodemon
+		allows gulp to restart express html server each time project is
+		restarted without having to first shut down the server manually and
+		then restarting.  <I>npm install gulp-nodemon</I></FONT></FONT></P>
+	</UL>
+</UL>
+</BODY>
+</HTML>

@@ -1,0 +1,10 @@
+REST
+Representational State Transfer
+REST services represent 'things' (nouns, ie author, book etc...)
+
+GET - get data/object
+POST - add data
+DELETE - remove data
+PUT - update data
+PATCH - update a portion of a piece of data
+
